@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useTelegram } from './hooks/useTelegram'
 
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const {onToggleButton,tg} = useTelegram();
 
   useEffect( () =>{
      tg.ready();
@@ -32,7 +34,7 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onToggleButton}>Toggle</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
