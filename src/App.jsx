@@ -12,7 +12,7 @@ function App() {
      tg.ready();
   },[])
 
-  const obClose = () => {
+  const onClose = () => {
     tg.close();
   }
 
@@ -34,7 +34,7 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
-        <button onClick={onclose}>Close</button>
+        <button onClick={onClose}>Close</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
