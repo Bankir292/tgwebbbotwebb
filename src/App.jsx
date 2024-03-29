@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const tg = window.Telegram.WebApp
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +12,7 @@ function App() {
      tg.ready();
   },[])
 
-  const onClose = () => {
-    tg.close();
-  }
+  
 
   return (
     <>
