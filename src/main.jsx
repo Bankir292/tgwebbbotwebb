@@ -9,10 +9,10 @@ import Form from './components/Form/Form.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ProductList/>,
+    element: <App/>,
   },
   {
-    path:"form",
+    path:"/form",
     element:<Form/>,
   },
 ]);
