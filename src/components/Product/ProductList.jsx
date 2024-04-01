@@ -18,7 +18,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = (props) => {
     const  [addedItems, setAddedItems] = useState([]);
-    const {tg} = useTelegram();
+    const {WebApp} = useTelegram();
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item =>item.id ===product.id);
         let newItems = [];
@@ -32,10 +32,10 @@ const ProductList = (props) => {
         setAddedItems(newItems);
 
         if(newItems.length === 0){
-            tg.MainButton.hide();
+            WebApp.MainButton.hide();
         } else {
-            tg.MainButton.show();
-            tg.MainButton.setParams({
+            WebApp.MainButton.show();
+            WebApp.MainButton.setParams({
                 text: `Total price ${getTotalPrice(newItems)}`
             })
         }

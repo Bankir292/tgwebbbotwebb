@@ -1,6 +1,7 @@
 import React from "react";
 import './ProductItem.css';
 import Button from "../Button/Button";
+import Header from "../Header/Header";
 
 const ProductItem = ({product, className,onAdd}) => {
     const onAddHandler = () => {
@@ -8,6 +9,8 @@ const ProductItem = ({product, className,onAdd}) => {
     }
 
     return (
+        <>
+        <Header/>
         <div className={'product' + className}>
             <div className={'img'}/>
             <div className={'title'}>{product.title}</div>
@@ -19,6 +22,7 @@ const ProductItem = ({product, className,onAdd}) => {
             Add to card
         </Button> 
         </div>
+        </>
     );
 };
 
