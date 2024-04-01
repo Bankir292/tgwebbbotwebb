@@ -4,7 +4,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 
 const Form = (props) => {
     const [country, setCountry] = useState('');
-    const [street, seyStreet] = useState('');
+    const [street, setStreet] = useState('');
     const [subject, setSubject] = useState('physical');
     const {WebApp} = useTelegram();
 

@@ -10,7 +10,6 @@ const ProductItem = ({product, className,onAdd}) => {
 
     return (
         <>
-        <Header/>
         <div className={'product' + className}>
             <div className={'img'}/>
             <div className={'title'}>{product.title}</div>
