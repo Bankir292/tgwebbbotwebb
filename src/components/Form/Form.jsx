@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import './Form.css';
 import { useTelegram } from "../../hooks/useTelegram";
 
@@ -8,6 +8,20 @@ const Form = (props) => {
     const [subject, setSubject] = useState('physical');
     const {WebApp} = useTelegram();
 
+    const onSendData = useCallback(() => {
+        const data = {
+            country, street, subject
+        }
+        WebApp.sendData(JSON.stringify(data));
+    }, [country, street, subject])
+    useEffect( () => {
+        WebApp.onEvent("mainButtonClicked", onSendData);
+        return () => {
+            WebApp.offEvent("mainButtonClicked", onSendData)
+        }
+    }, [onSendData])
+    
+    
     useEffect( () => {
         WebApp.MainButton.setParams({
             text: "Send data"
