@@ -6,3 +6,19 @@
     outline: none;
     cursor: pointer;
 }
+.button.main-add-btn {
+    background-color: #3B82F6;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 2em;
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: overlay;
+    color: white;
+    padding: 0 0.2em 0.25em;
+}

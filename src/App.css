@@ -42,3 +42,8 @@
 .read-the-docs {
   color: #888;
 }
+.btn-menu {
+  bottom: 2em;
+  right: 2em;
+  position: absolute;
+}
