@@ -1,0 +1,19 @@
+.card {
+    padding: .5em;
+    border-radius: 30px;
+    background-color: white;
+    height: 100%;
+    width: 300px;
+    
+    overflow: hidden;
+}
+
+h3.card-title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 .5em .5em;
+}
+.card-items {
+    overflow: auto;
+    max-height: 250px;
+}

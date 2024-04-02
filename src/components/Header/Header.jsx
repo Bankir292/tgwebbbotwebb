@@ -8,10 +8,15 @@ const Header = (props) => {
 
     return (
         <div className={'header'}>
-            <Button onClick={onClose}>Close</Button>
+            <div className={'header-left'}>
+            <img src={props.userIcon} className={'user-icon'}/>
             <span className={'username'}>
-                {user.username}
+                {user?.username ? user.username : 'Username'}
             </span>
+            </div>
+            <div className={'header-right'}>
+                <span>Icon</span>
+            </div>
         </div>
     );
 };

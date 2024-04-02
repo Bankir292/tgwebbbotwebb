@@ -3,8 +3,20 @@
     height: 50px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 1em;
+    justify-content: space-between;
 }
-.username{
-    margin-left: auto;
+.username {
+    font-weight: bold;
+    align-self: center;
+    margin: 0 0.1em;
+}
+.header-left {
+    display: flex;
+    flex-direction: row;
+}
+img.user-icon {
+    width: auto;
+    height: 30px;
+    border-radius: 60px;
 }

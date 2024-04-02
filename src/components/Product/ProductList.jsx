@@ -26,7 +26,7 @@ const ProductList = (props) => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch("https://localhost:8000", {
+        fetch("https://localhost:8000/web-data", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const ProductList = (props) => {
             body: JSON.stringify(data)
         })
 
-    }, [])
+    }, [addedItems, queryId])
     useEffect( () => {
         WebApp.onEvent("mainButtonClicked", onSendData);
         return () => {
