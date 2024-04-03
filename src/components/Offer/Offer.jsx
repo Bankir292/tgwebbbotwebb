@@ -2,11 +2,13 @@ import React, { Component, useState } from "react";
 import "./Offer.css";
 import gold from "../../images/sprites_15.png";
 import Counter from "../Counter/Counter";
+import OfferPopup from "../OfferPopup/OfferPopup";
 
 const Offer = (props) => {
     const [isActive, setIsActive] = useState(false);
     return (
         <>
+            
             <div className={"item"}>
                 <div className={"central_offer"} onClick={() => setIsActive(!isActive)}>
                     <div
@@ -35,6 +37,9 @@ const Offer = (props) => {
                     </div>
                 
             </div>
+            
+            <OfferPopup  active={isActive ? true : false}/>
+            
         </>
     );
 };

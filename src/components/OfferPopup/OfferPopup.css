@@ -1,0 +1,4 @@
+.offerpopup.close {
+    transition: transform .8s ease-in-out;
+    transform: translateY(100%);
+}
