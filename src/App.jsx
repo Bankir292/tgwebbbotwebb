@@ -20,9 +20,10 @@ function App() {
 
   return (
     <>
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
         <Header userIcon={userIcon}/>
-        <UserPage/>
+        {/* User icons */}
+        <UserPage userIcon={userIcon}/>
         <div className={'btn-menu'}>
         <Button className={'main-add-btn'}>+</Button>
         </div>

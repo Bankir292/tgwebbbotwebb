@@ -4,8 +4,9 @@
     background-color: white;
     height: 100%;
     width: 300px;
-    
+    margin: .3em 0;
     overflow: hidden;
+    min-height: 300px;
 }
 
 h3.card-title {
